@@ -4,4 +4,4 @@ Part of my Xcode projects and sources created during [Hacking With Swift Live](h
 
 Practicing writing an app downloading 3 independent JSON data files and displaying them using SwiftUI.
 
-![Screenshot](_screenshot.png)
+<a href="_screenshot.png" target="_blank" ><img src="_screenshot.png" width="30%"/></a>

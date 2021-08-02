@@ -4,4 +4,4 @@ Part of my Xcode projects and sources created during [Hacking With Swift Live](h
 
 Practicing writing a small app showing a "petitions" JSON fetched and decoded using the new Swift concurrency approach.
 
-![Screenshot](_screenshot.png)
+<a href="_screenshot.png" target="_blank" ><img src="_screenshot.png" width="30%"/></a>
