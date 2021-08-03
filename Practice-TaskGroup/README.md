@@ -5,5 +5,3 @@ Part of my Xcode projects and sources created during [Hacking With Swift Live](h
 Writing an `loadData` method fetching data from different locations and of different types, combining the result before updating the views model.
 
 No screenshot here... it's all in the code: [ContentView.swift](Practice-TaskGroup/ContentView.swift)!
-
-<a href="_screenshot.png" target="_blank" ><img src="_screenshot.png" width="30%"/></a>

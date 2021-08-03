@@ -19,7 +19,7 @@ My Xcode projects and sources created during [Hacking With Swift Live](http://ha
 
 - [Practice News Stories](Practice-NewsStories): Writing a small app showing news stories fetched from 5 JSON feeds, concatenating and sorting for display.
 
-- [Heterogenous TaskGroups](HeteroTaskGroups): How to handle tasks within a `TaskGroup` returing different types? Wrap the result in an `enum`!. Read the code in [ContentView.swift](HeteroTaskGroups/HeteroTaskGroups/ContentView.swift)
+- [Heterogenous TaskGroups](HeteroTaskGroups): How to handle tasks within a `TaskGroup` returing different types? Wrap the result in an `enum`! Read the code in [ContentView.swift](HeteroTaskGroups/HeteroTaskGroups/ContentView.swift)
 
 - [Practice TaskGroup](Practice-TaskGroup): Writing a asynchonous `loadData` method fetching data from different locations and of different types, combining the result before updating the views model. Read the code in [ContentView.swift](Practice-TaskGroup/Practice-TaskGroup/ContentView.swift)!
 
