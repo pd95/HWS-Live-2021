@@ -13,6 +13,63 @@ struct Message: Codable, Identifiable {
     let text: String
 }
 
+func factors(for number: Int) async throws -> [Int] {
+    var result = [Int]()
+
+    for check in 1...number {
+        if number.isMultiple(of: check) {
+            result.append(check)
+
+            // Artificial suspension point to allow Swift to schedule some other task
+            await Task.suspend()
+
+            // Check whether we should abort
+            try Task.checkCancellation()
+        }
+    }
+
+    return result
+}
+
+// Artificiall example using TaskGroup:
+func printMessage() async {
+    let string = await withTaskGroup(of: String.self) { group -> String in
+        print("adding tasks to group")
+        group.addTask(priority: .low) { "Hello" }
+        group.addTask {
+            try? await Task.sleep(seconds: Double.random(in: 0...3))
+            return "From"
+        }
+        group.addTask {
+            try? await Task.sleep(seconds: Double.random(in: 0...3))
+            return "A"
+        }
+        group.addTask {
+            try? await Task.sleep(seconds: Double.random(in: 0...3))
+            return "Task"
+        }
+        group.addTask {
+            try? await Task.sleep(seconds: Double.random(in: 0...3))
+            return "Group"
+        }
+
+        //group.cancelAll()
+
+        var collected = [String]()
+
+        print("awaiting tasks...")
+        for await value in group {
+            print("  some value: \(value)")
+            collected.append(value)
+        }
+
+        print("returning result")
+        return collected.joined(separator: " ")
+    }
+
+    print(string)
+}
+
 struct ContentView: View {
     @State private var inbox = [Message]()
     @State private var sent = [Message]()
@@ -99,23 +156,66 @@ struct ContentView: View {
 //                    // This code might not run
 //                }
 
+//                // Priorities and priority escalation due to "await"
+//                do {
+//                    let inboxTask = Task(priority: .low) { () -> [Message] in
+//                        print("inboxTask", Task.currentPriority)
+//                        let inboxURL = URL(string: "https://hws.dev/inbox.json")!
+//                        return try await URLSession.shared.decode(from: inboxURL)
+//                    }
+//
+//                    let sentTask = Task{ () -> [Message] in
+//                        print("sentTask", Task.currentPriority)
+//                        let sentURL = URL(string: "https://hws.dev/sent.json")!
+//                        return try await URLSession.shared.decode(from: sentURL)
+//                    }
+//
+//                    // Await the value of the tasks
+//                    inbox = try await inboxTask.value
+//                    sent = try await sentTask.value
+//                } catch {
+//                    print(error.localizedDescription)
+//                }
 
-                // Priorities and priority escalation due to "await"
+                // Task cancellation and TaskGroup
                 do {
-                    let inboxTask = Task(priority: .low) { () -> [Message] in
-                        print("inboxTask", Task.currentPriority)
-                        let inboxURL = URL(string: "https://hws.dev/inbox.json")!
-                        return try await URLSession.shared.decode(from: inboxURL)
-                    }
+                    // Submit our artificial example task (using an independent Task)
+                    Task(priority: .low, operation: {
+                        await printMessage()
+                    })
 
-                    let sentTask = Task{ () -> [Message] in
-                        print("sentTask", Task.currentPriority)
+                    // Collecting multiple pages of the inbox messages using a TaskGroup
+                    inbox = try await withThrowingTaskGroup(of: [Message].self, body: { group -> [Message] in
+                        for i in 1...3 {
+                            group.addTask {
+                                let inboxURL = URL(string: "https://hws.dev/inbox-\(i).json")!
+                                return try await URLSession.shared.decode(from: inboxURL)
+                            }
+                        }
+                        //group.cancelAll()
+
+                        // The parts come back in a random order...
+                        let allMessages = try await group.reduce(into: [Message](), { $0 += $1 })
+
+                        // ... and need sorting!
+                        return allMessages.sorted(by: { $0.id < $1.id })
+                    })
+
+                    let sentTask = Task { () -> [Message] in
+                        // artificially sleep here
+                        try await Task.sleep(seconds: 1)
+
+                        // Check whether we have been canceled before doing actual work
+                        // throws a Task.CancellationError
+                        try Task.checkCancellation()
+
                         let sentURL = URL(string: "https://hws.dev/sent.json")!
                         return try await URLSession.shared.decode(from: sentURL)
                     }
 
-                    // Await the value of the tasks
-                    inbox = try await inboxTask.value
+                    // Cancelling the task to abort its fetch
+                    //sentTask.cancel()
+
                     sent = try await sentTask.value
                 } catch {
                     print(error.localizedDescription)

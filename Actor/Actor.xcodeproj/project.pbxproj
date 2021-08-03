@@ -7,22 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		17E99E7726B97D04003106F5 /* Task+Sleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E99E7626B97D04003106F5 /* Task+Sleep.swift */; };
-		17EE249B26B840EA004616C1 /* MessageInboxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EE249A26B840EA004616C1 /* MessageInboxApp.swift */; };
-		17EE249D26B840EA004616C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EE249C26B840EA004616C1 /* ContentView.swift */; };
-		17FFCB6726B88A1000103FA7 /* URLSession+Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FFCB6626B88A1000103FA7 /* URLSession+Decode.swift */; };
+		17E99ED526B9B209003106F5 /* ActorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E99ED426B9B209003106F5 /* ActorApp.swift */; };
+		17E99ED726B9B209003106F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E99ED626B9B209003106F5 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		17E99E7626B97D04003106F5 /* Task+Sleep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+Sleep.swift"; sourceTree = "<group>"; };
-		17EE249726B840EA004616C1 /* MessageInbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageInbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		17EE249A26B840EA004616C1 /* MessageInboxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInboxApp.swift; sourceTree = "<group>"; };
-		17EE249C26B840EA004616C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		17FFCB6626B88A1000103FA7 /* URLSession+Decode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+Decode.swift"; sourceTree = "<group>"; };
+		17E99ED126B9B209003106F5 /* Actor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Actor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		17E99ED426B9B209003106F5 /* ActorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorApp.swift; sourceTree = "<group>"; };
+		17E99ED626B9B209003106F5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		17EE249426B840EA004616C1 /* Frameworks */ = {
+		17E99ECE26B9B209003106F5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -32,69 +28,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		17EE248E26B840EA004616C1 = {
+		17E99EC826B9B209003106F5 = {
 			isa = PBXGroup;
 			children = (
-				17EE249926B840EA004616C1 /* MessageInbox */,
-				17EE249826B840EA004616C1 /* Products */,
+				17E99ED326B9B209003106F5 /* Actor */,
+				17E99ED226B9B209003106F5 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		17EE249826B840EA004616C1 /* Products */ = {
+		17E99ED226B9B209003106F5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				17EE249726B840EA004616C1 /* MessageInbox.app */,
+				17E99ED126B9B209003106F5 /* Actor.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		17EE249926B840EA004616C1 /* MessageInbox */ = {
+		17E99ED326B9B209003106F5 /* Actor */ = {
 			isa = PBXGroup;
 			children = (
-				17EE249A26B840EA004616C1 /* MessageInboxApp.swift */,
-				17EE249C26B840EA004616C1 /* ContentView.swift */,
-				17FFCB6626B88A1000103FA7 /* URLSession+Decode.swift */,
-				17E99E7626B97D04003106F5 /* Task+Sleep.swift */,
+				17E99ED426B9B209003106F5 /* ActorApp.swift */,
+				17E99ED626B9B209003106F5 /* ContentView.swift */,
 			);
-			path = MessageInbox;
+			path = Actor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		17EE249626B840EA004616C1 /* MessageInbox */ = {
+		17E99ED026B9B209003106F5 /* Actor */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 17EE24A526B840EB004616C1 /* Build configuration list for PBXNativeTarget "MessageInbox" */;
+			buildConfigurationList = 17E99EDF26B9B20A003106F5 /* Build configuration list for PBXNativeTarget "Actor" */;
 			buildPhases = (
-				17EE249326B840EA004616C1 /* Sources */,
-				17EE249426B840EA004616C1 /* Frameworks */,
-				17EE249526B840EA004616C1 /* Resources */,
+				17E99ECD26B9B209003106F5 /* Sources */,
+				17E99ECE26B9B209003106F5 /* Frameworks */,
+				17E99ECF26B9B209003106F5 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = MessageInbox;
-			productName = MessageInbox;
-			productReference = 17EE249726B840EA004616C1 /* MessageInbox.app */;
+			name = Actor;
+			productName = Actor;
+			productReference = 17E99ED126B9B209003106F5 /* Actor.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		17EE248F26B840EA004616C1 /* Project object */ = {
+		17E99EC926B9B209003106F5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
-					17EE249626B840EA004616C1 = {
+					17E99ED026B9B209003106F5 = {
 						CreatedOnToolsVersion = 13.0;
 					};
 				};
 			};
-			buildConfigurationList = 17EE249226B840EA004616C1 /* Build configuration list for PBXProject "MessageInbox" */;
+			buildConfigurationList = 17E99ECC26B9B209003106F5 /* Build configuration list for PBXProject "Actor" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -102,18 +96,18 @@
 				en,
 				Base,
 			);
-			mainGroup = 17EE248E26B840EA004616C1;
-			productRefGroup = 17EE249826B840EA004616C1 /* Products */;
+			mainGroup = 17E99EC826B9B209003106F5;
+			productRefGroup = 17E99ED226B9B209003106F5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				17EE249626B840EA004616C1 /* MessageInbox */,
+				17E99ED026B9B209003106F5 /* Actor */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		17EE249526B840EA004616C1 /* Resources */ = {
+		17E99ECF26B9B209003106F5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -123,21 +117,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		17EE249326B840EA004616C1 /* Sources */ = {
+		17E99ECD26B9B209003106F5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17FFCB6726B88A1000103FA7 /* URLSession+Decode.swift in Sources */,
-				17EE249D26B840EA004616C1 /* ContentView.swift in Sources */,
-				17E99E7726B97D04003106F5 /* Task+Sleep.swift in Sources */,
-				17EE249B26B840EA004616C1 /* MessageInboxApp.swift in Sources */,
+				17E99ED726B9B209003106F5 /* ContentView.swift in Sources */,
+				17E99ED526B9B209003106F5 /* ActorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		17EE24A326B840EB004616C1 /* Debug */ = {
+		17E99EDD26B9B20A003106F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -198,7 +190,7 @@
 			};
 			name = Debug;
 		};
-		17EE24A426B840EB004616C1 /* Release */ = {
+		17E99EDE26B9B20A003106F5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -253,7 +245,7 @@
 			};
 			name = Release;
 		};
-		17EE24A626B840EB004616C1 /* Debug */ = {
+		17E99EE026B9B20A003106F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -274,7 +266,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.MessageInbox;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.Actor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -282,7 +274,7 @@
 			};
 			name = Debug;
 		};
-		17EE24A726B840EB004616C1 /* Release */ = {
+		17E99EE126B9B20A003106F5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -303,7 +295,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.MessageInbox;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.Actor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -314,25 +306,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		17EE249226B840EA004616C1 /* Build configuration list for PBXProject "MessageInbox" */ = {
+		17E99ECC26B9B209003106F5 /* Build configuration list for PBXProject "Actor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				17EE24A326B840EB004616C1 /* Debug */,
-				17EE24A426B840EB004616C1 /* Release */,
+				17E99EDD26B9B20A003106F5 /* Debug */,
+				17E99EDE26B9B20A003106F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		17EE24A526B840EB004616C1 /* Build configuration list for PBXNativeTarget "MessageInbox" */ = {
+		17E99EDF26B9B20A003106F5 /* Build configuration list for PBXNativeTarget "Actor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				17EE24A626B840EB004616C1 /* Debug */,
-				17EE24A726B840EB004616C1 /* Release */,
+				17E99EE026B9B20A003106F5 /* Debug */,
+				17E99EE126B9B20A003106F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 17EE248F26B840EA004616C1 /* Project object */;
+	rootObject = 17E99EC926B9B209003106F5 /* Project object */;
 }
