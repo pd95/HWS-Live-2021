@@ -7,12 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17D53AB226BC42F50084692D /* Bus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D53AB126BC42F50084692D /* Bus.swift */; };
+		17D53AB426BC43050084692D /* BusRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D53AB326BC43050084692D /* BusRow.swift */; };
+		17D53AB626BC43290084692D /* BusListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D53AB526BC43290084692D /* BusListView.swift */; };
+		17D53AB826BC44BC0084692D /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D53AB726BC44BC0084692D /* UserData.swift */; };
+		17D53ABA26BC44F30084692D /* TicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D53AB926BC44F30084692D /* TicketView.swift */; };
 		17E99F0926B9D1CD003106F5 /* BusPlusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E99F0826B9D1CD003106F5 /* BusPlusApp.swift */; };
 		17E99F0B26B9D1CD003106F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E99F0A26B9D1CD003106F5 /* ContentView.swift */; };
 		17E99F0D26B9D1CE003106F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17E99F0C26B9D1CE003106F5 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17D53AB126BC42F50084692D /* Bus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bus.swift; sourceTree = "<group>"; };
+		17D53AB326BC43050084692D /* BusRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusRow.swift; sourceTree = "<group>"; };
+		17D53AB526BC43290084692D /* BusListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusListView.swift; sourceTree = "<group>"; };
+		17D53AB726BC44BC0084692D /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		17D53AB926BC44F30084692D /* TicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketView.swift; sourceTree = "<group>"; };
 		17E99F0526B9D1CD003106F5 /* BusPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17E99F0826B9D1CD003106F5 /* BusPlusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusPlusApp.swift; sourceTree = "<group>"; };
 		17E99F0A26B9D1CD003106F5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -30,6 +40,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17D53ABB26BC45640084692D /* Buses */ = {
+			isa = PBXGroup;
+			children = (
+				17D53AB526BC43290084692D /* BusListView.swift */,
+				17D53AB326BC43050084692D /* BusRow.swift */,
+				17D53AB126BC42F50084692D /* Bus.swift */,
+			);
+			path = Buses;
+			sourceTree = "<group>";
+		};
+		17D53ABC26BC45720084692D /* Ticket */ = {
+			isa = PBXGroup;
+			children = (
+				17D53AB926BC44F30084692D /* TicketView.swift */,
+				17D53AB726BC44BC0084692D /* UserData.swift */,
+			);
+			path = Ticket;
+			sourceTree = "<group>";
+		};
 		17E99EFC26B9D1CD003106F5 = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +80,8 @@
 			children = (
 				17E99F0826B9D1CD003106F5 /* BusPlusApp.swift */,
 				17E99F0A26B9D1CD003106F5 /* ContentView.swift */,
+				17D53ABB26BC45640084692D /* Buses */,
+				17D53ABC26BC45720084692D /* Ticket */,
 				17E99F0C26B9D1CE003106F5 /* Assets.xcassets */,
 			);
 			path = BusPlus;
@@ -125,6 +156,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17D53AB826BC44BC0084692D /* UserData.swift in Sources */,
+				17D53AB226BC42F50084692D /* Bus.swift in Sources */,
+				17D53AB626BC43290084692D /* BusListView.swift in Sources */,
+				17D53ABA26BC44F30084692D /* TicketView.swift in Sources */,
+				17D53AB426BC43050084692D /* BusRow.swift in Sources */,
 				17E99F0B26B9D1CD003106F5 /* ContentView.swift in Sources */,
 				17E99F0926B9D1CD003106F5 /* BusPlusApp.swift in Sources */,
 			);
