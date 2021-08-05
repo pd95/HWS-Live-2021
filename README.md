@@ -28,3 +28,8 @@ My Xcode projects and sources created during [Hacking With Swift Live](http://ha
   **Bonus:** Using `Task.detached` to run code parallely not bound to the same actor which the View might inherit from its properties!
 
 - [Bus+](BusPlus): new features in SwiftUI so far `AsyncImage`, `.task` modifier (to be continued on day 3!)
+
+## Day 3
+
+- [AsyncSequence](AsyncSequence): This session was an introduction to `AsyncSequence` hosted by [Daniel H Steinberg](https://dimsumthinking.com).
+  First reminder about `Sequence` and `Iterator` protocol and conformance, then introducing asynchronicity by using notifications (and the new `Notification` sequence which conforms to `AsyncSequence`), implementing own data model using `AsyncSequence` and `AsyncIterator`, finally using `AsyncStream`.

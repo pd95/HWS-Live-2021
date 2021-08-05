@@ -1,0 +1,3 @@
+[submodule "AsyncSequence"]
+	path = AsyncSequence
+	url = https://github.com/pd95/HWS-Live-2021-AsyncSequence.git
