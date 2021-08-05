@@ -34,3 +34,18 @@ My Xcode projects and sources created during [Hacking With Swift Live](http://ha
 - [AsyncSequence](https://github.com/pd95/HWS-Live-2021-AsyncSequence/): This session was an introduction to `AsyncSequence` hosted by [Daniel H Steinberg](https://dimsumthinking.com).
   First reminder about `Sequence` and `Iterator` protocol and conformance, then introducing asynchronicity by using notifications (and the new `Notification` sequence which conforms to `AsyncSequence`), implementing own data model using `AsyncSequence` and `AsyncIterator`, finally using `AsyncStream`.
 
+- [Bus+](BusPlus): illustrating more new features of SwiftUI
+  - `refreshable` to reload busses list with a "pull to refresh" gesture
+  - `searchable` to allow searching/filtering the list of busses
+  - Adding `swipeActions` for "Add favorite" button
+  - tinting list row separators and using a few new colors `indigo`, `mint` and `cyan`
+  - using `foregroundStyle` to add a gradient drawing to a SF symbol
+  - using `symbolRenderingMode` to draw SF symbols hierarchically
+  - using Markdown styling for `Text` rendering
+  - using `ultraThinMaterial` to have a blured background when a bus has been selected
+  - using `focused` modifier, `submitLabel` and `onSubmit` to implement a User input form with automatic input focussing.
+  - adding "Next" and "Done" buttons to keyboard toolbar (using `ToolbarItemGroup(placement: .keyboard)`)
+  - illustrating `ObservableObject` using `@MainActor` to validate some user data
+  - adding a `badge` modifier to a `tabItem`to highlight missing user input
+  - **Bonus**: generating a QR code from user provided data (using CoreImage `CIFilter`)
+  - **Bonus**: using `Mirror` to introspect `Bus` type for improved search completion
