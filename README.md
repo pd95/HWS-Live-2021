@@ -31,5 +31,6 @@ My Xcode projects and sources created during [Hacking With Swift Live](http://ha
 
 ## Day 3
 
-- [AsyncSequence](AsyncSequence): This session was an introduction to `AsyncSequence` hosted by [Daniel H Steinberg](https://dimsumthinking.com).
+- [AsyncSequence](https://github.com/pd95/HWS-Live-2021-AsyncSequence/): This session was an introduction to `AsyncSequence` hosted by [Daniel H Steinberg](https://dimsumthinking.com).
   First reminder about `Sequence` and `Iterator` protocol and conformance, then introducing asynchronicity by using notifications (and the new `Notification` sequence which conforms to `AsyncSequence`), implementing own data model using `AsyncSequence` and `AsyncIterator`, finally using `AsyncStream`.
+
