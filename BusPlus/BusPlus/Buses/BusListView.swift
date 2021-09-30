@@ -45,7 +45,9 @@ struct BusListView: View {
                             }
                         }
                 }
-                .refreshable(action: fetchData)
+                .refreshable {
+                    await fetchData()
+                }
                 .searchable(text: $search.animation()) {
                     if !search.isEmpty {
                         withAnimation {
